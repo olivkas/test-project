@@ -26,7 +26,7 @@ class Fields extends Component  {
     }
   }
 
-  project = () => {
+switchType = () => {
     const {type,title,values,name,form} = this.props;
     switch(type) {
       case "TEXT": return  <TextInput title={title} handOnChange={this.handOnChange} value={form[name]} />;
@@ -39,7 +39,7 @@ class Fields extends Component  {
 
   render() {
     return(
-      <div>{ this.project() }</div>
+      <div>{ this.switchType() }</div>
     );
   }
 };
